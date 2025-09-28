@@ -8,7 +8,7 @@ plugins {
 
 android {
     namespace = "com.example.aa"
-    compileSdk = 34  // أو استخدم flutter.compileSdkVersion
+    compileSdk = 36  // أو استخدم flutter.compileSdkVersion
     ndkVersion = flutter.ndkVersion
 
     defaultConfig {

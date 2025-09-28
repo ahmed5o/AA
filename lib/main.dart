@@ -1,5 +1,6 @@
 import 'dart:io';
 import 'package:aa/MyApp.dart';
+import 'package:aa/core/app/connectivity_controller.dart';
 import 'package:aa/core/app/env.variable.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
@@ -24,9 +25,10 @@ void main() async {
   await SystemChrome.setPreferredOrientations([
     DeviceOrientation.portraitUp,
     DeviceOrientation.portraitDown,
-  ]).then(
-    (_) {
-      runApp(const MyApp());
-    },
-  );
+  ]);
+
+  // ✅ نعمل init مرة واحدة هنا
+  await ConnectivityController.instance.init();
+
+  runApp(const MyApp());
 }
