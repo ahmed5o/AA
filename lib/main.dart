@@ -1,34 +1,20 @@
 import 'dart:io';
-import 'package:aa/MyApp.dart';
-import 'package:aa/core/app/connectivity_controller.dart';
-import 'package:aa/core/app/env.variable.dart';
+import 'package:aa/Store_App.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-
-  await EnvVariable.instance.init(EnvTypeEnum.dev);
-
   Platform.isAndroid
       ? await Firebase.initializeApp(
-          options: const FirebaseOptions(
-            apiKey: 'AIzaSyAYZZLjuI_xbU54cKfVe_VaVldVS7CyMvs',
-            appId: '1:685419312159:android:37d1f1cc8c7928cffe912a',
-            messagingSenderId: '685419312159',
-            projectId: 'aaaa-baf59',
+          options: FirebaseOptions(
+            apiKey: 'AIzaSyD6BcQJrhgwEvHNhTLMZtCEXspjNAYHS9k',
+            appId: '1:58922822889:android:22dbb88df7a9825dea5478',
+            messagingSenderId: '58922822889',
+            projectId: 'storeplus-f5bb3',
           ),
         )
       : await Firebase.initializeApp();
-
-  await SystemChrome.setPreferredOrientations([
-    DeviceOrientation.portraitUp,
-    DeviceOrientation.portraitDown,
-  ]);
-
-  // ✅ نعمل init مرة واحدة هنا
-  await ConnectivityController.instance.init();
-
+  await Firebase.initializeApp();
   runApp(const MyApp());
 }
