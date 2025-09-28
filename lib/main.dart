@@ -16,5 +16,5 @@ void main() async {
         )
       : await Firebase.initializeApp();
   await Firebase.initializeApp();
-  runApp(const Store_App());
+  runApp(const MyApp());
 }
