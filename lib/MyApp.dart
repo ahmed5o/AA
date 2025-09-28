@@ -1,12 +1,14 @@
+import 'package:aa/core/app/env.variable.dart';
 import 'package:flutter/material.dart';
 
 // ignore: camel_case_types
-class Store_App extends StatelessWidget {
-  const Store_App({super.key});
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: EnvVariable.instance.debugMode,
       title: 'Flutter Demo',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
