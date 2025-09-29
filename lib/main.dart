@@ -27,7 +27,6 @@ void main() async {
     DeviceOrientation.portraitDown,
   ]);
 
-  // ✅ نعمل init مرة واحدة هنا
   await ConnectivityController.instance.init();
 
   runApp(const MyApp());
