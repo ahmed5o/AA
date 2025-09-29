@@ -24,7 +24,7 @@ dev_dependencies:
   flutter_launcher_icons: ^0.14.4
   flutter_lints: ^5.0.0
 
-flutter_icons:          
+flutter_icons:
   android: true
   image_path: "assets/icon/play_store_512.png"
   adaptive_icon_background: "#FFFFFF"
@@ -37,3 +37,23 @@ flutter:
     - .env.dev
     - .env.prod
     - assets/images/core/
+
+  fonts:
+    # Arabic Fonts
+    - family: Cairo
+      fonts:
+        - asset: assets/fonts/arabic/cairo/Cairo-Bold.ttf
+          weight: 700
+        - asset: assets/fonts/arabic/cairo/Cairo-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/arabic/cairo/Cairo-Regular.ttf
+          weight: 400
+    # Poppins Fonts
+    - family: Poppins
+      fonts:
+        - asset: assets/fonts/english/poppins/Poppins-Bold.ttf
+          weight: 700
+        - asset: assets/fonts/english/poppins/Poppins-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/english/poppins/Poppins-Regular.ttf
+          weight: 400
