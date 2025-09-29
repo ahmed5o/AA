@@ -18,7 +18,11 @@ dependencies:
   connectivity_plus: ^7.0.0
   flutter_dotenv: ^6.0.0
   flutter_screenutil: ^5.9.3
+<<<<<<< Updated upstream
 >>>>>>> main
+=======
+  flutter_native_splash: ^2.4.6
+>>>>>>> Stashed changes
 
 dev_dependencies:
   flutter_test:
