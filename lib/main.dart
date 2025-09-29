@@ -15,6 +15,17 @@ void main() async {
           ),
         )
       : await Firebase.initializeApp();
+<<<<<<< HEAD
   await Firebase.initializeApp();
+=======
+
+  await SystemChrome.setPreferredOrientations([
+    DeviceOrientation.portraitUp,
+    DeviceOrientation.portraitDown,
+  ]);
+
+  await ConnectivityController.instance.init();
+
+>>>>>>> splach-screen
   runApp(const MyApp());
 }
