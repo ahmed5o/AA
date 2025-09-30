@@ -1,3 +1,4 @@
+import 'package:aa/Theme/app_theme.dart';
 import 'package:aa/core/app/connectivity_controller.dart';
 import 'package:aa/core/app/env.variable.dart';
 import 'package:aa/routes/app_routes.dart';
@@ -20,9 +21,7 @@ class MyApp extends StatelessWidget {
             builder: (_, __) => MaterialApp(
               title: 'Store App',
               debugShowCheckedModeBanner: EnvVariable.instance.debugMode,
-              theme: ThemeData(
-                colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-              ),
+              theme: themeDark(),
               initialRoute: AppRoutes.testOneScreen,
               onGenerateRoute: AppRoutes.onGenerateRoute,
             ),
