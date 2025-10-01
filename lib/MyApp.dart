@@ -1,6 +1,7 @@
 import 'package:aa/Theme/app_theme.dart';
 import 'package:aa/core/app/connectivity_controller.dart';
 import 'package:aa/core/app/env.variable.dart';
+import 'package:aa/core/language/app_localization_setup.dart';
 import 'package:aa/routes/app_routes.dart';
 import 'package:aa/screens/no_network_screen.dart';
 import 'package:flutter/material.dart';
@@ -22,9 +23,14 @@ class MyApp extends StatelessWidget {
               title: 'Store App',
               debugShowCheckedModeBanner: EnvVariable.instance.debugMode,
               theme: themeDark(),
+              locale: const Locale('ar'),
+              supportedLocales: AppLocalizationsSetup.supportedLocales,
+              localizationsDelegates:
+                  AppLocalizationsSetup.localizationsDelegates,
               initialRoute: AppRoutes.testOneScreen,
-              onGenerateRoute: AppRoutes.onGenerateRoute,
+              onGenerateRoute: AppRoutes.onGenerateRoute, 
             ),
+            
           );
         } else {
           return MaterialApp(
