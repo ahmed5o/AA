@@ -1,9 +1,12 @@
+import 'package:aa/Theme/asset_extension.dart';
 import 'package:aa/Theme/color_extension.dart';
 import 'package:aa/core/language/app_localization.dart';
 import 'package:flutter/material.dart';
 
 extension ContextExt on BuildContext {
-  MyColor get myColor => Theme.of(this).extension<MyColor>()!;
+  MyColors get myColor => Theme.of(this).extension<MyColors>()!;
+
+  MyAssets get myAssets => Theme.of(this).extension<MyAssets>()!;
 
   String translate(String key) {
     return AppLocalizations.of(this)!.translate(key) ?? key;
