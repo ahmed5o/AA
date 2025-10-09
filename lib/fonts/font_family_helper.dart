@@ -3,5 +3,13 @@ class FontFamilyHelper {
   static const String cairoArabic = 'Cairo';
   static const String poppinsEngligh = 'Poppins';
 
-  //TODO: add switch Arabic font or Engligh font
+  static String gelocalozedFontFamily() {
+    //TODO: sheares preferences
+    const currentloungehe = 'ar';
+    if (currentloungehe == 'ar') {
+      return cairoArabic;
+    } else {
+      return poppinsEngligh;
+    }
+  }
 }

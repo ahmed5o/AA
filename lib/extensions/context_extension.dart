@@ -8,6 +8,10 @@ extension ContextExt on BuildContext {
 
   MyAssets get myAssets => Theme.of(this).extension<MyAssets>()!;
 
+  TextStyle get textStyle => Theme.of(this).textTheme.bodyMedium!;
+
+  
+
   String translate(String key) {
     return AppLocalizations.of(this)!.translate(key) ?? key;
   }

@@ -1,4 +1,4 @@
-import 'package:aa/screens/under_build_screen.dart';
+import 'package:aa/common/screens/under_build_screen.dart';
 import 'package:flutter/material.dart';
 
 class BaseRoute extends PageRouteBuilder<dynamic> {

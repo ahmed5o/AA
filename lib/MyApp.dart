@@ -3,7 +3,7 @@ import 'package:aa/core/app/connectivity_controller.dart';
 import 'package:aa/core/app/env.variable.dart';
 import 'package:aa/core/language/app_localization_setup.dart';
 import 'package:aa/routes/app_routes.dart';
-import 'package:aa/screens/no_network_screen.dart';
+import 'package:aa/common/screens/no_network_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
